@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+// Using an ALL_CAPS name will convert it to CamelCase, according to ChatGPT.
+enum RequestType {
+    PING = 0;
+}
+
+enum ResponseType {
+    ACK = 0;
+}
+
+message Request {
+    RequestType req_type = 1;
+    // TODO(@Skeletrox): Convert this to bytes
+    optional string payload = 2;
+}
+
+message Response {
+    ResponseType res_type = 1;
+    // TODO(@Skeletrox): Convert this to bytes
+    optional string payload = 2;
+}
