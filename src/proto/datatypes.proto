@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+enum Datatype {
+    FIXLENSTR = 0;
+    VARLENSTR = 1;
+    INT = 2;
+    FLOAT = 3;
+    BOOL = 4;
+}
