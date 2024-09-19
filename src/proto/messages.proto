@@ -1,5 +1,5 @@
 syntax = "proto3";
-
+package messages;
 // Using an ALL_CAPS name will convert it to CamelCase, according to ChatGPT.
 enum RequestType {
     PING = 0;

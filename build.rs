@@ -1,8 +1,7 @@
-fn main() {
-    protobuf_codegen::Codegen::new()
-        .cargo_out_dir("messages")
-        .include("src")
-        .input("src/proto/messages.proto")
-        .input("src/proto/datatypes.proto")
-        .run_from_script();
+use std::io::Result;
+fn main() -> Result<()> {
+    prost_build::compile_protos(
+        &["src/proto/messages.proto", "src/proto/datatypes.proto"],
+        &["src/"]).unwrap();
+        Ok(())
 }

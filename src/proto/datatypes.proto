@@ -1,9 +1,10 @@
 syntax = "proto3";
+package datatypes;
 
 enum Datatype {
     FIXLENSTR = 0;
     VARLENSTR = 1;
     INT = 2;
     FLOAT = 3;
-    BOOL = 4;
+    BOOLEAN = 4;
 }
